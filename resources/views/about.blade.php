@@ -8,10 +8,10 @@
 </head>
 
 <body>
-    <h1>Hello, World!</h1>
+    <h1>About</h1>
 
     <div>
-        <a href="/about">About</a>
+        <a href="/">Back to home</a>
     </div>
 </body>
 
