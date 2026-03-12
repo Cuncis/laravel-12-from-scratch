@@ -1,13 +1,31 @@
 <?php
 
+use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
 
+
 Route::get('/', function () {
-    return view('welcome', [
-        'greeting' => 'Helloo, ',
-        'name' => request('name', 'Guest'),
-        'tasks' => ['Go to the store', 'Go to the bank', 'Go to the post office'],
+
+    $ideas = session()->get('ideas', []);
+
+    return view('ideas', [
+        'ideas' => $ideas,
     ]);
+});
+
+Route::post('/ideas', function (Request $request) {
+
+    $ideas = $request->input('ideas');
+
+    session()->push('ideas', $ideas);
+
+    return redirect('/')->with('message', 'Your idea has been saved!');
+});
+
+Route::get('/clear-ideas', function () {
+    session()->forget('ideas');
+
+    return redirect('/');
 });
 
 Route::view('/about', 'about');

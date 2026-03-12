@@ -30,14 +30,10 @@
             text-align: center;
         }
     </style>
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
 </head>
 
-<body>
-    <nav>
-        <a href="/">Home</a>
-        <a href="/about">About</a>
-        <a href="/contact">Contact</a>
-    </nav>
+<body class="bg-gray-900 text-white p-9">
     <main>
         {{ $slot }}
     </main>
