@@ -1,5 +1,5 @@
 <x-layout>
-    {{-- <form action="/ideas" method="post">
+    <form action="/ideas" method="post">
         @csrf
         <div class="col-span-full">
             <label for="ideas" class="block text-sm/6 font-medium text-white">New Idea</label>
@@ -14,22 +14,4 @@
             </div>
         </div>
     </form>
-
-    <div class="mt-6 flex items-center gap-x-6">
-        <a href="/clear-ideas" class="text-sm/6 font-semibold text-white">Clean Ideas</a>
-    </div> --}}
-
-    <a class="rounded-md bg-indigo-500 px-3 py-2 text-sm font-semibold text-white focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-500"
-        href="/ideas/create">Add New Idea</a>
-
-    @if ($ideas->count() > 0)
-        <h1 class="text-2xl font-bold text-white mt-6">Your Ideas:</h1>
-    @endif
-    <ul>
-        @forelse($ideas as $idea)
-            <li>{{ $idea->id }}. <a href="/ideas/{{ $idea->id }}">{{ $idea->description }}</a></li>
-        @empty
-            <p class="text-gray-400">You don't have any ideas yet.</p>
-        @endforelse
-    </ul>
 </x-layout>
