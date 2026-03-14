@@ -19,12 +19,12 @@
         <a href="/clear-ideas" class="text-sm/6 font-semibold text-white">Clean Ideas</a>
     </div>
 
-    @if ($fromDbIdeas->count() > 0)
+    @if ($ideas->count() > 0)
         <h1 class="text-2xl font-bold text-white mt-6">Your Ideas:</h1>
     @endif
     <ul>
-        @forelse($fromDbIdeas as $idea)
-            <li>{{ $idea->description }}</li>
+        @forelse($ideas as $idea)
+            <li><a href="/ideas/{{ $idea->id }}">{{ $idea->description }}</a></li>
         @empty
             <p class="text-gray-400">You don't have any ideas yet.</p>
         @endforelse
