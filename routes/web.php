@@ -7,6 +7,7 @@ use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\Route;
 
 Route::get('/', [IdeaController::class, 'index']);
+Route::get('/ideas', [IdeaController::class, 'index']);
 Route::get('/ideas/create', [IdeaController::class, 'create']);
 Route::post('/ideas', [IdeaController::class, 'store']);
 Route::get('/ideas/{idea}', [IdeaController::class, 'show']);

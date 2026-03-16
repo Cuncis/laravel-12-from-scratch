@@ -38,7 +38,7 @@ class IdeaController extends Controller
             'state' => 'pending',
         ]);
 
-        return redirect('/');
+        return redirect('/ideas');
     }
 
     /**
@@ -64,9 +64,11 @@ class IdeaController extends Controller
     /**
      * Update the specified resource in storage.
      */
-    public function update(IdeaRequest $idea)
+    public function update(IdeaRequest $request, Idea $idea)
     {
-        return redirect('/ideas/' . $idea->id);
+        $idea->update($request->validated());
+
+        return redirect('/ideas');
     }
 
     /**
@@ -76,6 +78,6 @@ class IdeaController extends Controller
     {
         $idea->delete();
 
-        return redirect('/');
+        return redirect('/ideas');
     }
 }

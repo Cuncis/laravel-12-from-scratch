@@ -2,39 +2,20 @@
     'title' => 'Laracasts'
 ])
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" data-theme="dracula">
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>{{ $title }}</title>
-    <style>
-         nav {
-            background: #eee;
-            padding: 10px;
-        }
-         nav a {
-            margin-right: 10px;
-        }
-        .max-w-400 {
-            max-width: 400px;
-
- 
-
-         margin: auto;
-        }
-           .card {
-            background:red; 
-            padding: 20px; 
-            border-radius: 5px;
-            text-align: center;
-        }
-    </style>
     <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@5" rel="stylesheet" type="text/css" />
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@5/themes.css" rel="stylesheet" type="text/css" />
 </head>
 
-<body class="bg-gray-900 text-white p-9">
-    <main>
+<body >
+    <x-nav />
+    <main class="max-w-2xl mx-auto mt-10">
         {{ $slot }}
     </main>
 </body>
