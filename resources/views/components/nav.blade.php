@@ -20,9 +20,10 @@
             <li><a href="/ideas/create">New Idea</a></li>
         </ul>
     </div>
-    <div class="navbar-end">
+    <div class="navbar-end gap-2">
         @guest
-            <a href="/register" class="btn btn-primary">Register</a>
+            <a href="/login" class="btn btn-primary">Login</a>
+            <a href="/register" class="btn">Register</a>
         @endguest
 
         @auth
