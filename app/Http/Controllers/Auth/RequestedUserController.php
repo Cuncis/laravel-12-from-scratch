@@ -31,6 +31,6 @@ class RequestedUserController extends Controller
 
         Auth::login($user);
 
-        return redirect('/ideas')->with('success', 'Registration successful!');
+        return redirect('/ideas');
     }
 }
