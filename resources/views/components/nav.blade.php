@@ -21,6 +21,6 @@
         </ul>
     </div>
     <div class="navbar-end">
-        <a class="btn">Button</a>
+        <a href="/register" class="btn btn-primary">Register</a>
     </div>
 </div>

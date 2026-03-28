@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\Auth\RequestedUserController;
 use App\Http\Controllers\IdeaController;
 use App\Models\Idea;
 use Illuminate\Http\Request;
@@ -14,3 +15,6 @@ Route::get('/ideas/{idea}', [IdeaController::class, 'show']);
 Route::get('/ideas/{idea}/edit', [IdeaController::class, 'edit']);
 Route::patch('/ideas/{idea}', [IdeaController::class, 'update']);
 Route::delete('/ideas/{idea}', [IdeaController::class, 'destroy']);
+
+Route::get('/register', [RequestedUserController::class, 'create']);
+Route::post('/register', [RequestedUserController::class, 'store']);
