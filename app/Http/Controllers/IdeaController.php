@@ -14,12 +14,12 @@ class IdeaController extends Controller
      */
     public function index()
     {
-        $ideas = Idea::query()
-            ->where([
-                'user_id' => Auth::id(),
-            ])->get();
+        // $ideas = Idea::query()
+        //     ->where([
+        //         'user_id' => Auth::id(),
+        //     ])->get();
 
-        // $ideas = Auth::user()->ideas;
+        $ideas = Auth::user()->ideas;
 
         return view('ideas.index', [
             'ideas' => $ideas

@@ -1,11 +1,7 @@
 <x-layout>
     <div class="mb-3">
-        @if ($idea->count() > 0)
-            <h1 class="text-2xl font-bold text-white mt-6">Your Idea:</h1>
-            <p>{{ $idea->description }}</p>
-        @else
-            <p class="text-gray-400">You don't have any ideas yet.</p>
-        @endif
+        <h1 class="text-2xl font-bold text-white mt-6">Your Idea:</h1>
+        <p>{{ $idea->description }}</p>
     </div>
 
 

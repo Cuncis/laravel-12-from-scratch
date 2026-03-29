@@ -7,4 +7,9 @@ use Illuminate\Database\Eloquent\Model;
 class Idea extends Model
 {
     protected $fillable = ['description', 'state', 'user_id'];
+
+    public function user()
+    {
+        return $this->belongsTo(User::class);
+    }
 }
