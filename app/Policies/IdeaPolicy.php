@@ -18,8 +18,4 @@ class IdeaPolicy
     public function update(User $user, Idea $idea) {
         return $user->id === $idea->user_id;
     }
-
-    public function create(User $user) {
-        return $user->isAdmin();
-    }
 }
